@@ -16,7 +16,6 @@ jobs:
         uses: aquasecurity/trivy-action@master
         with:
           scan-type: 'config'
-          hide-progress: false
           security-checks: 'vuln,secret,config'
           ignore-unfixed: true
           format: 'sarif'
