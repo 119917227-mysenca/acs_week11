@@ -15,7 +15,7 @@ terraform {
 provider "aws" {
   region = "us-west-2"
 }
-
+#test
 resource "random_pet" "sg" {}
 
 data "aws_ami" "ubuntu" {
