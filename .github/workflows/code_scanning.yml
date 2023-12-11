@@ -16,11 +16,11 @@ jobs:
         uses: aquasecurity/trivy-action@master
         with:
           scan-type: 'config'
-          security-checks: 'vuln,secret,config'
+          # security-checks: 'vuln,secret,config'
           ignore-unfixed: false
           format: 'sarif'
           output: 'trivy-results.sarif'
-          severity: 'CRITICAL'
+          # severity: 'CRITICAL'
 
 
       - name: Upload Trivy scan results to GitHub Security tab
