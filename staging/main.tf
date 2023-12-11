@@ -45,3 +45,14 @@ resource "aws_security_group" "web-sg" {
     cidr_blocks = ["1.2.3.4/32"]
   }
 }
+
+resource "aws_security_group" "web-sg-2" {
+  name = "${random_pet.sg.id}-sg"
+  description = "Ingress on port 8000"
+  ingress {
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["1.2.3.4/32"]
+  }
+}
